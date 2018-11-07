@@ -12,6 +12,9 @@ import Table from "../Table";
 import Link from "../Link";
 import Logo from "../Logo";
 import GreyTxt from "../GreyTxt";
+import Cell from "../Cell";
+import Issue from "../Issue";
+import Test from "../Test";
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -47,17 +50,21 @@ function NumberList(props) {
 }
 
 
-storiesOf("Labo", module)
-    .add("Simple list", () =>  <NumberList numbers={[1, 2, 3, 4, 5]} />)
-    .add("Logo", () => <Logo></Logo>)
-    .add("Main link", () => <Link id="1" URL="www.test.com" content="Issue content"/>)
-    .add("Grey text", () => <GreyTxt id="1234" datetime="datetime" date="7 novembre 2018" ago="50 min ago" user="torvalds" title="Issue opened by torvalds"/>)
-    .add("Cell content", () => 
-      <div><Logo/> 
-      <div class="float-left col-9 lh-condensed p-2">
-      <Link id="1" URL="www.test.com" content="Issue content"/> 
-      <GreyTxt id="1234" datetime="datetime" date="7 novembre 2018" ago="50 min ago" user="torvalds" title="Issue opened by torvalds"/>
-      </div>
-      </div>)
-    .add("Table", () => <Table></Table>);
+storiesOf("Issue list", module)
+  .add("Simple list", () =>  <NumberList numbers={[1, 2, 3, 4, 5]} />)
+  .add("Logo", () => <Logo></Logo>)
+  .add("Main link", () => <Link id="1" URL="www.test.com" content="Issue content"/>)
+  .add("Grey text", () => <GreyTxt id="1234" datetime="datetime" date="7 novembre 2018" ago="50 min ago" user="torvalds" title="Issue opened by torvalds"/>)
+  .add("Cell content", () => 
+    <div><Logo/> 
+    <div class="float-left col-9 lh-condensed p-2">
+    <Link id="1" URL="www.test.com" content="Issue content"/> 
+    <GreyTxt id="1234" datetime="datetime" date="7 novembre 2018" ago="50 min ago" user="torvalds" title="Issue opened by torvalds"/>
+    </div>
+    </div>)
+  .add("Cell", () => <Cell></Cell>)
+  .add("Table", () => <Table></Table>);
     
+storiesOf("Issue details", module)
+  .add("Test", () => <Test></Test>)
+  .add("Details", () => <Issue></Issue> )
