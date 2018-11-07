@@ -15,6 +15,13 @@ import GreyTxt from "../GreyTxt";
 import Cell from "../Cell";
 import Issue from "../Issue";
 import Test from "../Test";
+import Detailed3Dots from '../Details3Dots';
+import EmojiButton from '../EmojiButton';
+import IssueHeader from '../IssueHeaer';
+import IssueBody from '../IssueBody';
+import TimelineStructure from '../TimelineStructure';
+import AvatarPic from '../AvatarPic';
+import IssueContent from '../IssueContent';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -67,4 +74,10 @@ storiesOf("Issue list", module)
     
 storiesOf("Issue details", module)
   .add("Test", () => <Test></Test>)
+  .add("Avatar pic", () => <TimelineStructure><AvatarPic></AvatarPic></TimelineStructure>)
+  .add("...", () => <Detailed3Dots></Detailed3Dots>)
+  .add("Emoji button", () => <EmojiButton></EmojiButton>)
+  .add("Issue header", () => <TimelineStructure><IssueContent><IssueHeader></IssueHeader></IssueContent></TimelineStructure>)
+  .add("Issue body", () => <TimelineStructure><IssueContent><IssueBody></IssueBody></IssueContent></TimelineStructure>)
   .add("Details", () => <Issue></Issue> )
+  .add("Timeline", () => <div><Issue></Issue><Issue></Issue><Issue></Issue><Issue></Issue></div>);
