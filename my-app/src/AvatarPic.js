@@ -4,9 +4,10 @@ import './githubstyle2.css';
 
 class AvatarPic extends Component {
   render() {
+    const {username, avatarUrl} = this.props;
     return (
       <div class="avatar-parent-child timeline-comment-avatar">
-      <img class="avatar rounded-1" alt="@gaearon" src="https://avatars2.githubusercontent.com/u/810438?s=88&amp;v=4" width="44" height="44" />
+      <img class="avatar rounded-1" alt={username} src={avatarUrl} width="44" height="44" />
     </div>
     )
   }

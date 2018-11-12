@@ -5,6 +5,7 @@ import './githubstyle2.css';
 
 class IssueBody extends Component {
   render() {
+    const {message} = this.props;
     return (
 
       <div class="edit-comment-hide">
@@ -14,7 +15,7 @@ class IssueBody extends Component {
               <tr class="d-block">
                 <td class="d-block comment-body markdown-body  js-comment-body">
 
-                  <p>A full reproducing project would be nice.</p>
+                  <p>{message}</p>
                 </td>
               </tr>
             </tbody>

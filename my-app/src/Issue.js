@@ -12,12 +12,13 @@ import AvatarPic from './AvatarPic';
 
 class Issue extends Component {
   render() {
+    const {username, message, avatarUrl} = this.props;
     return (
       <TimelineStructure>
-        <AvatarPic></AvatarPic>
+        <AvatarPic username={username} avatarUrl={avatarUrl}></AvatarPic>
         <IssueContent>
-          <IssueHeader></IssueHeader>
-          <IssueBody></IssueBody>
+          <IssueHeader username={username}></IssueHeader>
+          <IssueBody message={message}></IssueBody>
         </IssueContent>
       </TimelineStructure>
     );

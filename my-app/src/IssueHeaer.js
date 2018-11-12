@@ -7,6 +7,7 @@ import Detailed3Dots from './Details3Dots';
 
 class IssueHeader extends Component {
   render() {
+    const {username} = this.props;
     return (
 
 
@@ -31,7 +32,7 @@ class IssueHeader extends Component {
           <strong class="css-truncate">
 
 
-            <a class="author text-inherit css-truncate-target" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=810438" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/gaearon" aria-describedby="hovercard-aria-description">gaearon</a>
+            <a class="author text-inherit css-truncate-target" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=810438" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href={username} aria-describedby="hovercard-aria-description">{username}</a>
 
 
           </strong>

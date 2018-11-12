@@ -1,24 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './index.css';
 
-import Table from './Table';
+import IssueDiscussion from './IssueDiscussion';
 
 import * as serviceWorker from './serviceWorker';
-import IssueDiscussion from './IssueDiscussion';
-import EmojiButton from './EmojiButton';
-import Cell from './Cell';
 
 //ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-    <Route path='/page1' component={IssueDiscussion}/>
-      <Table></Table>
-    </Switch>
-  </BrowserRouter>
-  , document.getElementById('root'));
+ReactDOM.render(<IssueDiscussion></IssueDiscussion>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
